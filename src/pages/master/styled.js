@@ -28,6 +28,9 @@ export const ButtonTopLeft = styled(Link)`
 `;
 
 export const ButtonBox = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 1rem;
@@ -36,7 +39,7 @@ export const ButtonBox = styled.button`
   color: ${({ theme }) => theme.backgroundColor};
   line-height: 19.5px;
   height: 56px;
-  max-width: 347px;
+  max-width: 360px;
   width: 100%;
   padding: 0 18px;
   transition: 0.3s;
