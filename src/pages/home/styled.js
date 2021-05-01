@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { device } from "./../../theme";
 
 export const Box = styled.div`
-  margin-top: 210px;
   display: flex;
   flex-direction: column;
   align-items: center;

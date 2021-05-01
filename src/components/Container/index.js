@@ -7,4 +7,7 @@ export const Container = styled.div`
   font-size: 23px;
   padding: 45px 52px;
   background-color: ${({ theme }) => theme.backgroundColor};
+  display: flex;
+  justify-content: ${(props) => props.justify};
+  align-items: ${(props) => props.align};
 `;

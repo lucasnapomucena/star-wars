@@ -26,16 +26,14 @@ const Master = () => {
         api.get("/people/1"),
         api.get("/people/4"),
       ]);
-
+      console.log(data);
       const skin = thema(data?.skin_color);
 
       setTheme(skin);
       setPersona(data);
 
       setLoading(false);
-    } catch (error) {
-      throw new Error(error);
-    }
+    } catch (error) {}
   };
 
   const handleClick = () => {
@@ -59,12 +57,27 @@ const Master = () => {
 
         setLoading(false);
       } catch (error) {
-        throw new Error(error);
+        setLoading(true);
+        //throw new Error(error);
       }
     }
 
     getPersona();
   }, []);
+
+  if (loading && !persona.length) {
+    return (
+      <Container justify="center" align="center">
+        <Loading
+          width="100px"
+          height="100px"
+          bg={theme.textColor}
+          spinner={theme.light}
+          align="center"
+        />
+      </Container>
+    );
+  }
 
   return (
     <ThemeProvider theme={theme}>
@@ -75,16 +88,7 @@ const Master = () => {
         </ButtonTopLeft>
         <Box>
           <ButtonBox onClick={handleClick} disabled={loading}>
-            choose your path again, Padawan{" "}
-            {loading && (
-              <Loading
-                width="20px"
-                height="20px"
-                bg={theme.light}
-                spinner={theme.textColor}
-                ml="8px"
-              />
-            )}
+            choose your path again, Padawan
           </ButtonBox>
 
           {loading ? (
