@@ -67,12 +67,12 @@ const Master = () => {
 
   if (loading && !persona.length) {
     return (
-      <Container justify="center" align="center">
+      <Container display="flex" justify="center" align="center">
         <Loading
           width="100px"
           height="100px"
-          bg={theme.textColor}
-          spinner={theme.light}
+          bg={defaultTheme.textColor}
+          spinner={defaultTheme.light}
           align="center"
         />
       </Container>
@@ -82,37 +82,28 @@ const Master = () => {
   return (
     <ThemeProvider theme={theme}>
       <Container>
-        <ButtonTopLeft to="/">
-          <Back width={31} height={26} viewBox="0 0 31 26" />
-          back
-        </ButtonTopLeft>
-        <Box>
-          <ButtonBox onClick={handleClick} disabled={loading}>
-            choose your path again, Padawan
-          </ButtonBox>
+        <>
+          <ButtonTopLeft to="/">
+            <Back width={31} height={26} viewBox="0 0 31 26" />
+            back
+          </ButtonTopLeft>
+          <Box>
+            <ButtonBox onClick={handleClick} disabled={loading}>
+              choose your path again, Padawan
+            </ButtonBox>
 
-          {loading ? (
-            <Loading
-              width="100px"
-              height="100px"
-              bg={theme.textColor}
-              spinner={theme.light}
-              mt="120px"
-            />
-          ) : (
-            <>
-              <Image>
-                <img src={theme.img} alt={persona.name} />
-              </Image>
-
-              {persona.name && (
+            {persona.name && (
+              <>
+                <Image>
+                  <img src={theme.img} alt={persona.name} />
+                </Image>
                 <Text>
                   Your master is <strong>{persona.name}</strong>
                 </Text>
-              )}
-            </>
-          )}
-        </Box>
+              </>
+            )}
+          </Box>
+        </>
       </Container>
     </ThemeProvider>
   );

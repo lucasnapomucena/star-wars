@@ -6,8 +6,9 @@ export const Container = styled.div`
   margin: 0 auto;
   font-size: 23px;
   padding: 45px 52px;
-  background-color: ${({ theme }) => theme.backgroundColor};
-  display: flex;
-  justify-content: ${(props) => props.justify};
-  align-items: ${(props) => props.align};
+  background-color: ${({ theme }) =>
+    theme.backgroundColor ? theme.backgroundColor : ""};
+  display: ${(props) => (props.display ? props.display : "")};
+  justify-content: ${(props) => (props.justify ? props.justify : "")};
+  align-items: ${(props) => (props.align ? props.align : "")};
 `;
