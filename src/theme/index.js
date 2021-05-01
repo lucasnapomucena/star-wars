@@ -15,7 +15,7 @@ export const darkTheme = {
   textColor: "#FFFFFF",
   primary: "#2B2B2B",
   light: darken(0.05, "#2B2B2B"),
-  img: ["images/darth-vader.png"],
+  img: ["./images/darth-vader.png"],
 };
 
 export const lightTheme = {
@@ -23,7 +23,7 @@ export const lightTheme = {
   textColor: "#2A2A2A",
   primary: "#FBFE63",
   light: darken(0.05, "#FBFE63"),
-  img: ["images/luke-skywalker.png"],
+  img: ["./images/luke-skywalker.png"],
 };
 
 export const defaultTheme = {
