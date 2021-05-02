@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { ThemeProvider } from "styled-components";
-import api from "./../../services/api";
-import { darkTheme, lightTheme, defaultTheme } from "./../../theme";
-import { ButtonTopLeft, Box, ButtonBox, Image, Text } from "./styled";
-import { Container, Back, Loading } from "../../components";
+import React, { useEffect, useState } from 'react';
+import { ThemeProvider } from 'styled-components';
+import api from '../../services/api';
+import { darkTheme, lightTheme, defaultTheme } from '../../theme';
+import { ButtonTopLeft, Box, ButtonBox, Image, Text } from './styled';
+import { Container, Back, Loading } from '../../components';
 
 const Master = () => {
   const [loading, setLoading] = useState(true);
@@ -12,9 +12,9 @@ const Master = () => {
 
   const thema = (skin) => {
     switch (skin) {
-      case "white":
+      case 'white':
         return darkTheme;
-      case "fair":
+      case 'fair':
         return lightTheme;
       default:
         return defaultTheme;
@@ -22,10 +22,7 @@ const Master = () => {
   };
   const getPersona = async () => {
     try {
-      const { data } = await Promise.race([
-        api.get("/people/1"),
-        api.get("/people/4"),
-      ]);
+      const { data } = await Promise.race([api.get('/people/1'), api.get('/people/4')]);
       const skin = thema(data?.skin_color);
 
       setTheme(skin);
@@ -44,10 +41,7 @@ const Master = () => {
   useEffect(() => {
     async function getPersona() {
       try {
-        const { data } = await Promise.race([
-          api.get("/people/1"),
-          api.get("/people/4"),
-        ]);
+        const { data } = await Promise.race([api.get('/people/1'), api.get('/people/4')]);
 
         const skin = thema(data?.skin_color);
 

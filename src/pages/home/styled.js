@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import { device } from "./../../theme";
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import { device } from '../../theme';
 
 export const Box = styled.div`
   display: flex;
@@ -10,7 +10,7 @@ export const Box = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-weight: 400;
   font-size: 72px;
   text-align: center;
@@ -20,7 +20,7 @@ export const Title = styled.h1`
     font-size: 52px;
   }
   strong {
-    font-family: "Lato";
+    font-family: 'Lato';
     font-weight: 700;
   }
 `;

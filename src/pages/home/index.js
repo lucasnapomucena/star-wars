@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { ThemeProvider } from "styled-components";
-import { defaultTheme } from "./../../theme";
-import { Container, Loading } from "./../../components";
-import { Box, Subtitle, Title, Button } from "./styled";
+import React, { useState } from 'react';
+import { ThemeProvider } from 'styled-components';
+import { defaultTheme } from '../../theme';
+import { Container, Loading } from '../../components';
+import { Box, Subtitle, Title, Button } from './styled';
 
 const Home = () => {
   const [loading, setLoading] = useState(false);

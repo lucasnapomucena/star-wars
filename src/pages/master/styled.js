@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { device } from "../../theme";
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import { device } from '../../theme';
 
 export const Box = styled.div`
   padding-top: 104.15px;
@@ -36,7 +36,7 @@ export const ButtonBox = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 1rem;
   border-radius: 10px;

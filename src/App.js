@@ -1,11 +1,11 @@
-import React from "react";
-import { Router, Route, Switch } from "react-router-dom";
+import React from 'react';
+import { Router, Route, Switch } from 'react-router-dom';
 
-import history from "./history";
-import GlobalStyle from "./styles/global";
+import history from './history';
+import GlobalStyle from './styles/global';
 
-import Home from "./pages/home";
-import Master from "./pages/master";
+import Home from './pages/home';
+import Master from './pages/master';
 
 const App = () => {
   return (
