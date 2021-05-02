@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { device } from "../../theme";
 
 export const Box = styled.div`
   padding-top: 104.15px;
@@ -51,11 +52,16 @@ export const ButtonBox = styled.button`
 `;
 
 export const Image = styled.div`
+  display: flex;
   max-width: 380px;
   max-height: 380px;
   overflow: hidden;
   border-radius: 50%;
   margin-top: 91px;
+
+  @media (max-width: ${device.tablet}) {
+    margin-top: 32px;
+  }
 `;
 
 export const Text = styled.p`
