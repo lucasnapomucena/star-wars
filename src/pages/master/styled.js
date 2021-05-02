@@ -9,6 +9,10 @@ export const Box = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: ${device.tablet}) {
+    padding-top: 0;
+  }
 `;
 
 export const ButtonTopLeft = styled(Link)`
@@ -49,6 +53,11 @@ export const ButtonBox = styled.button`
   &:disabled {
     opacity: 0.5;
   }
+
+  @media (max-width: ${device.tablet}) {
+    margin-top: 35px;
+    order: 2;
+  }
 `;
 
 export const Image = styled.div`
@@ -60,7 +69,7 @@ export const Image = styled.div`
   margin-top: 91px;
 
   @media (max-width: ${device.tablet}) {
-    margin-top: 32px;
+    margin-top: 112px;
   }
 `;
 
@@ -71,6 +80,9 @@ export const Text = styled.p`
   line-height: 43.88px;
   margin-top: 18px;
 
+  @media (max-width: ${device.tablet}) {
+    margin-top: 20px;
+  }
   strong {
     font-weight: 700;
   }

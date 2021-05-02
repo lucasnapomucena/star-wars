@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 export const Loading = styled.div`
-  border: 5px solid ${(props) => (props.bg ? props.bg : "")};
-  border-left-color: ${(props) => (props.spinner ? props.spinner : "")};
+  border: 5px solid ${({ bg }) => (bg ? bg : "")};
+  border-left-color: ${({ spinner }) => (spinner ? spinner : "")};
   border-radius: 50%;
-  width: ${(props) => (props.width ? props.width : "50px")};
-  height: ${(props) => (props.height ? props.height : "50px")};
+  width: ${({ width }) => (width ? width : "50px")};
+  height: ${({ height }) => (height ? height : "50px")};
   animation: spin 1s linear infinite;
-  margin-top: ${(props) => (props.mt ? props.mt : "")};
-  margin-left: ${(props) => (props.ml ? props.ml : "")};
+  margin-top: ${({ mt }) => (mt ? mt : "")};
+  margin-left: ${({ ml }) => (ml ? ml : "")};
   display: flex;
 
   @keyframes spin {

@@ -13,7 +13,7 @@ const Home = () => {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Container display="flex" align="center" justify="center">
+      <Container justify="center">
         <Box>
           <Title>
             Welcome to <strong>iClinic</strong>

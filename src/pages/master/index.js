@@ -26,7 +26,6 @@ const Master = () => {
         api.get("/people/1"),
         api.get("/people/4"),
       ]);
-      console.log(data);
       const skin = thema(data?.skin_color);
 
       setTheme(skin);
@@ -58,7 +57,6 @@ const Master = () => {
         setLoading(false);
       } catch (error) {
         setLoading(true);
-        //throw new Error(error);
       }
     }
 
